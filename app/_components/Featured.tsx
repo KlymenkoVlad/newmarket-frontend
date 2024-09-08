@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MdArrowForward } from "react-icons/md";
+import AnimationItem from "@/components/Common/AnimationItem";
 
 const Featured = () => {
   return (
@@ -18,7 +19,9 @@ const Featured = () => {
 
       <div className="grid grid-cols-4 gap-8 text-white">
         <div className="relative col-span-4 row-span-3 flex items-end justify-center bg-gradient-to-r from-slate-800 to-zinc-900 xs:h-[450px] ms:h-[500px] sm:h-[600px] md:col-span-2">
-          <Image src="/banners/ps5.png" alt="item" width={511} height={511} />
+          <AnimationItem>
+            <Image src="/banners/ps5.png" alt="item" width={511} height={511} />
+          </AnimationItem>
           <div className="absolute bottom-11 left-11">
             <p className="mb-1 text-2xl font-semibold">PlayStation</p>
             <p className="mb-4">
@@ -34,7 +37,14 @@ const Featured = () => {
         </div>
 
         <div className="relative col-span-2 hidden h-[284px] w-[1fr] items-end justify-center bg-gradient-to-r from-neutral-800 to-slate-400 md:flex">
-          <Image src="/banners/woman.png" alt="item" width={432} height={286} />
+          <AnimationItem>
+            <Image
+              src="/banners/woman.png"
+              alt="item"
+              width={432}
+              height={286}
+            />
+          </AnimationItem>
           <div className="absolute bottom-11 left-11">
             <p className="mb-1 text-2xl font-semibold">Women’s Collections</p>
             <p className="mb-4">
@@ -50,12 +60,14 @@ const Featured = () => {
         </div>
 
         <div className="relative col-span-2 hidden h-[284px] items-end justify-center bg-gradient-to-r from-stone-800 to-slate-800 md:flex lg:col-span-1">
-          <Image
-            src="/banners/speaker.png"
-            alt="item"
-            width={210}
-            height={222}
-          />
+          <AnimationItem>
+            <Image
+              src="/banners/speaker.png"
+              alt="item"
+              width={210}
+              height={222}
+            />
+          </AnimationItem>
           <div className="absolute bottom-11 left-11">
             <p className="mb-1 text-2xl font-semibold">Speakers</p>
             <p className="mb-4">Wireless speakers </p>
@@ -69,13 +81,15 @@ const Featured = () => {
         </div>
 
         <div className="relative hidden h-[284px] w-[1fr] items-end justify-center bg-gradient-to-r from-neutral-800 to-gray-900 lg:flex">
-          <Image
-            src="/banners/perfume.png"
-            alt="item"
-            className="h-[222px] w-[210px]"
-            width={210}
-            height={220}
-          />
+          <AnimationItem>
+            <Image
+              src="/banners/perfume.png"
+              alt="item"
+              className="h-[222px] w-[210px]"
+              width={210}
+              height={220}
+            />
+          </AnimationItem>
           <div className="absolute bottom-11 left-11">
             <p className="mb-1 text-2xl font-semibold">Perfume</p>
             <p className="mb-4">GUCCI INTENSE OUD EDP </p>

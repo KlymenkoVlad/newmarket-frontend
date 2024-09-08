@@ -20,7 +20,7 @@ export async function getMe(): Promise<User | undefined> {
     const token = cookieStore.get("token");
 
     const res = await fetch(`${baseUrl}/api/auth`, {
-      next: { revalidate: 1 },
+      next: { revalidate: 60 },
       headers: {
         Authorization: `Bearer ${token?.value}`,
       },

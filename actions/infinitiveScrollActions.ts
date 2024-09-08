@@ -38,7 +38,7 @@ export async function getDataInfinitiveScroll(
       headers: {
         "Content-Type": "application/json",
       },
-      next: { revalidate: 1 },
+      next: { revalidate: 420 },
       method: "GET",
     }).then((res) => res.json());
 

@@ -90,7 +90,7 @@ export async function getSortedItems(sortParam: string, limit = 4) {
     const res = await fetch(
       `${baseUrl}/api/item?sort=${sortParam}&limit=${limit}`,
       {
-        next: { revalidate: 1 },
+        next: { revalidate: 420 },
         method: "GET",
       },
     );
@@ -108,7 +108,7 @@ export async function getSortedItems(sortParam: string, limit = 4) {
 export async function getProductData(params: string) {
   try {
     const res = await fetch(`${baseUrl}/api/item/${params}`, {
-      next: { revalidate: 1 },
+      next: { revalidate: 420 },
       method: "GET",
     });
 

@@ -8,8 +8,8 @@ import Navigation from "./_components/Navigation";
 import { redirect } from "next/navigation";
 import { getMe } from "@/actions/authActions";
 
-const tokenCheck = () => {
-  const cookieStore = cookies();
+const tokenCheck = async () => {
+  const cookieStore = await cookies();
   const token = cookieStore.get("token");
   if (!token) {
     redirect("login");
@@ -17,7 +17,7 @@ const tokenCheck = () => {
 };
 
 export default async function Page() {
-  tokenCheck();
+  await tokenCheck();
   const user = await getMe();
 
   if (!user) {
